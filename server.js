@@ -11,7 +11,7 @@ const app = express();
 app.use(morgan('dev'));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
-app.use(express.urlencoded);
+app.use(express.urlencoded());
 
 app.get('/', (req, res) => {
     res.send('Hello World')
