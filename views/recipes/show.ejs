@@ -8,7 +8,7 @@
             <article>
                 <h2><%= recipe.name %></h2>
                 <h3><%= recipe.type %></h3>
-                <%= recipe.image %>
+                <p><img src="<%= recipe.image %>" style="aspect-ratio: 16 / 9; max-width: 100%; height: auto"></p>
                 <p>Ingredients:<%= recipe.ingredients %></p>
                 <p>Instruction:<%= recipe.instruction %></p>
                 <a href="/recipes/<%=recipe._id%>/edit"><button>Edit</button></a>
