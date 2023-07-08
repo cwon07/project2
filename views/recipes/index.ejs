@@ -8,15 +8,13 @@
             <p><%= user %> is logged in.</p>
             <a href="/user/logout"><button>Logout</button></a>
             <a href="/recipes/new">Add a New Recipe</a>
-            <% for (recipe of recipes) { %>
-                <article>
-                    <a href="/recipes/<%=recipe._id%>">
-                        <h2>
-                            <%= recipe.name %>
-                        </h2>
-                    </a>                   
-                </article>
-            <% } %>
+            <ul>
+                <% for(let i = 0; i < recipes.length; i++){ %>
+        
+                    <li><a href="/recipes/<%= recipes[i]._id %>"><%= recipes[i].title %></a></li>
+                            
+                <% } %>
+            </ul>
         </div>
     </main>
 </body>
