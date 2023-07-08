@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <div>
+            <form action="/recipes" method="POST">
+                <fieldset>
+                    <legend>Add a New Recipe</legend>
+                    <label> Title of the Recipe: <input type="text" name="title"/></label>
+                    <label> Image of the Recipe: <input type="text" name="image"/></label>
+                    <label> Type of the Recipe: <input type="text" name="type"/></label>
+                    <label> Ingredients: <input type="text" name="ingredients"/></label>
+                    <label> Instruction: <input type="text" name="instruction"/></label>
+                    <input type="submit" value="add new recipe"/>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
