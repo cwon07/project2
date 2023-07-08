@@ -33,13 +33,12 @@ router.post('/login', async (req, res) => {
             req.session.loggedIn = true;
             res.redirect('/recipes');
         }else {
-            res.send('wrong password')
-        }
-    }})
+            res.redirect('/user/login');
+    }}})
 
 router.get('/logout', (req, res) => {
     req.session.destroy(err => {
-        res.redirect('/recipes');
+        res.redirect('/');
     })
 })
 
