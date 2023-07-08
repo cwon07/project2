@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <div>
+            <p><%= user %> is logged in.</p>
+            <a href="/logout"><button>Logout</button></a>
+            <a href="/recipes/new">Add a New Recipe</a>
+            <% for (recipe of recipes) { %>
+                <article>
+                    <a href="/recipes/<%=recipe._id%>">
+                        <h2>
+                            <%= recipe.name %>
+                        </h2>
+                    </a>                   
+                </article>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>

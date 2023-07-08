@@ -9,7 +9,7 @@
 
 ## Description
 
-When grandma's passed-down-for-5-generations, out-of-this-world banana bread recipe needs a digital recipe box so it never gets lost.. Crème de la Crème makes tracking and saving your best of the best recipes super easy! Simply copy and paste the recipe, add images, edit and update. 
+When grandma's passed-down-for-5-generations, out-of-this-world banana bread recipe needs a digital recipe box so it never gets lost.. Crème de la Crème makes tracking and saving your best of the best recipes super easy! Simply copy and paste the recipe, add images, edit and update. This product is made for anyone such as yours truly, whose favorite recipes are saved in a million different places and struggle to access them just when you need it. 
 
 ## Mock UP of UI
 

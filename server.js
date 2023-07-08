@@ -13,8 +13,8 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(express.urlencoded());
 
-app.get('/', (req, res) => {
-    res.send('Hello World')
+app.get('/recipes', (req, res) => {
+    res.render('index.ejs')
 })
 
 const PORT = process.env.PORT;
