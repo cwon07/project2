@@ -9,6 +9,9 @@
     "dev": "node --watch server.js",
     "test-db-connection": "node models/connection.js"
   },
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
