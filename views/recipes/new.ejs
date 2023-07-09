@@ -9,11 +9,29 @@
                 <fieldset>
                     <legend>Add a New Recipe</legend>
                     <label> Title of the Recipe: <input type="text" name="title"/></label>
-                    <label> Image of the Recipe: <input type="text" name="image"/></label>
-                    <label> Type of the Recipe: <input type="text" name="type"/></label>
-                    <label> Ingredients: <input type="text" name="ingredients"/></label>
-                    <label> Instruction: <input type="text" name="instruction"/></label>
-                    <input type="submit" value="add new recipe"/>
+                    <label> Image URL of the Recipe: <input type="text" name="image"/></label>
+                    <label> Type of the Recipe: 
+                        <select id="recipeType" name="type">
+                            <option value="breakfast">Breakfast</option>
+                            <option value="salad">Salad</option>
+                            <option value="pasta">Pasta</option>
+                            <option value="bread">Bread</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="dessert">Dessert</option>
+                            <option value="drink">Drink</option></select></label>
+                    <label> Ingredients: 
+                        <textarea id="textarea" placeholder="Enter ingredients..." name="ingredients"></textarea></label>
+                    <label> Instruction: 
+                        <textarea id="textarea" placeholder="Enter instruction..." name="instruction"></textarea></label>
+                    <input type="submit" onclick="replacePeriodsWithLineBreaks()" value="add new recipe"/>
+                    <script>
+                        function replacePeriodsWithLineBreaks() {
+                            const textarea = document.getElementById("textarea");
+                            const text = textarea.value;
+                            text = text.replace(/\./g, "");
+                            textarea.value = text;                 
+                        }
+                    </script>
                 </fieldset>
             </form>
         </div>

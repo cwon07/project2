@@ -13,7 +13,6 @@ router.use((req, res, next) => {
 
 router.get('/', async (req, res) => {
     const allRecipes = await Recipe.find({username: req.session.username})
-    console.log('this is the recipe', allRecipes);
     res.render(
         'recipes/index.ejs',
         {recipes: allRecipes, user: req.session.username}
@@ -28,7 +27,6 @@ router.get('/new', (req, res) => {
 router.post('/', async (req, res) => {
     req.body.username = req.session.username
     const newRecipe = await Recipe.create(req.body);
-    console.log('this is the new recipe', newRecipe)
     res.redirect('/recipes')
 });
 
