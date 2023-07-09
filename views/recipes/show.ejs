@@ -3,19 +3,49 @@
 <%- include('../partials/head.ejs') %>
 <body>
     <%- include('../partials/header.ejs') %>
+    <style>
+        legend h2 {
+            font-family: 'Solway', serif;
+            text-align: left;
+        }
+        legend h3 {
+            font-family: 'Nunito', sans-serif;
+            text-align: left;
+        }
+        nav {
+            font-family: 'Hammersmith One', sans-serif;
+            font-size: 20px;
+        }
+        .link-container {
+            display: flex;
+        }
+        .link-button, .nav-link {
+            background: none;
+            border: none;
+            font-weight: bold;
+            text-decoration: underline;
+            padding: 0;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    </style>
     <main>
         <div>
             <article>
-                <h2><%= recipe.title %></h2>
-                <h3><%= recipe.type %></h3>
+                <legend><h2><%= recipe.title %></h2></legend>
+                <legend><h3><%= recipe.type %></h3></legend>
                 <p><img src="<%= recipe.image %>" style="aspect-ratio: 16 / 9; max-width: 100%; height: auto"></p>
                 <p>Ingredients:<%= recipe.ingredients %></p>
                 <p>Instruction:<%= recipe.instruction %></p>
-                <a href="/recipes/<%=recipe._id%>/edit"><button>Edit</button></a>
-                <form action="/recipes/<%=recipe._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="delete" />
-                </form>
-                <a href="/recipes"><button>Back To Main</button></a>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <div class="link-container">
+                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/recipes/<%=recipe._id%>/edit">EDIT</a>
+                    <form action="/recipes/<%=recipe._id %>?_method=DELETE" method="POST">
+                        <button class="link-button" type="submit">DELETE</button> 
+                    </form>
+                    <a class="nav-link fw-bold py-1 px-0" href="/recipes">BACK TO LIST</a>
+                    </div>
+                </nav>
             </article>
         </div>
     </main>
