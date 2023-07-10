@@ -19,11 +19,15 @@
         .link-container {
             display: flex;
         }
-        .link-button, .nav-link {
+        .nav-link {
+            margin-right: 10px;
+        }
+        .link-button {
             background: none;
             border: none;
             font-weight: bold;
             text-decoration: underline;
+            cursor: pointer;
             padding: 0;
             font-size: 18px;
             margin-right: 10px;
@@ -34,9 +38,19 @@
             <article>
                 <legend><h2><%= recipe.title %></h2></legend>
                 <legend><h3><%= recipe.type %></h3></legend>
-                <p><img src="<%= recipe.image %>" style="aspect-ratio: 16 / 9; max-width: 100%; height: auto"></p>
-                <p>Ingredients:<%= recipe.ingredients %></p>
-                <p>Instruction:<%= recipe.instruction %></p>
+                <p><img src="<%= recipe.image %>"></p>
+                <legend>Ingredients:</legend>
+                <ul>
+                    <% recipe.ingredients.split(',').forEach(function(ingredient) { %>
+                        <li><%= ingredient.trim() %></li>
+                    <% }) %>
+                </ul>
+                <legend>Instruction:</legend>
+                <ol>
+                    <% recipe.instruction.split(',').forEach(function(instruction) { %>
+                        <li><%= instruction.trim() %></li>
+                    <% }) %>
+                </ol>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
                     <div class="link-container">
                     <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/recipes/<%=recipe._id%>/edit">EDIT</a>

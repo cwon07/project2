@@ -12,10 +12,13 @@
                 <label>Title: <input type="text" name="title" value="<%= recipe.title%>"/></label>
                 <label>Type: <input type="text" name="type" value="<%= recipe.type%>"/></label>
                 <label>Image: <input type="text" name="image" value="<%= recipe.image%>"/></label>
-                <label>Ingredients: <input type="text" name="ingredients" value="<%= recipe.ingredients%>"/></label>
-                <label>Instruction: <input type="text" name="instruction" value="<%= recipe.instruction%>"/></label>
+                <label> Ingredients: 
+                    <textarea id="textarea" name="ingredients" value="<%= recipe.ingredients%>"></textarea></label>
+                <label> Instruction: 
+                    <textarea id="textarea" name="instruction" value="<%= recipe.instruction%>"></textarea></label>
                 </label>
                 <input type="submit" value="edit recipe"/>
+                <a class="nav-link fw-bold py-1 px-0" href="/recipes">BACK TO LIST</a>
             </fieldset>
             </form>
         </div>
