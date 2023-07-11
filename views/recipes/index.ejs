@@ -2,19 +2,30 @@
 <html lang="en">
 <%- include('../partials/head.ejs') %>
 <body>
-    <%- include('../partials/header.ejs', '../partials/styles.ejs') %>
+    <%- include('../partials/header.ejs') %>
     <main>
-        <div>
+        <div class="index">
             <p>Welcome, <%= user %>!</p>
            
             <a href="/recipes/new">Add a New Recipe</a>
-            <ul>
+           <div class="recipe-container">
                 <% for(let i = 0; i < recipes.length; i++){ %>
-        
-                    <li><a href="/recipes/<%= recipes[i]._id %>"><%= recipes[i].title %></a></li>
-                            
+                    <div class="recipe">
+                        <div class="img-container">
+                            <a href="/recipes/<%= recipes[i]._id %>">
+                            <img src="<%= recipes[i].image %>" name="image" alt="Recipe Image"></a>
+                           <script>
+                                const img = document.getElementById("image") 
+                                img.addEventListener('error', (event) => { 
+                                event.target.src = "/images/defaultImage.png" 
+                                event.onerror = null 
+                                });
+                           </script>
+                        </div class="title">
+                        <a href="/recipes/<%= recipes[i]._id %>"><%= recipes[i].title %></a>    
+                    </div>                            
                 <% } %>
-            </ul>
+            </div>            
         </div>
     </main>
 </body>

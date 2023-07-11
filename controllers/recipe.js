@@ -26,7 +26,7 @@ router.get('/new', (req, res) => {
 
 router.post('/', async (req, res) => {
     req.body.username = req.session.username
-    const newRecipe = await Recipe.create(req.body);
+   await Recipe.create(req.body);
     res.redirect('/recipes')
 });
 
