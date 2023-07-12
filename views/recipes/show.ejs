@@ -4,6 +4,18 @@
 <body>
     <%- include('../partials/header.ejs') %>
     <style>
+        .container {
+            width: 80vw;
+            height: 40vw;
+            margin: 40px auto;
+            display: flex;
+        }
+        .sidebar {
+            background: url('<%=recipe.image || '/images/defaultImage.png' %>');
+            background-size: 30vw 70vh;
+            width: 80rem;
+            background-repeat: no-repeat;   
+        }
         legend h2 {
             font-family: 'Solway', serif;
             text-align: left;
@@ -34,11 +46,13 @@
         }
     </style>
     <main>
-        <div>
-            <article>
-                <legend><h2><%= recipe.title %></h2></legend>
-                <legend><h3><%= recipe.type %></h3></legend>
-                <p><img src="<%= recipe.image %>"></p>
+       
+        <div class="container">  
+               <div class="sidebar"></div>
+               <div class="recipe-info">
+                <fieldset class="recipeinfo">
+                    <legend><h2><%= recipe.title %></h2></legend>
+               <legend>Recipe Type: <h5><%= recipe.type %></h5></legend>
                 <legend>Ingredients:</legend>
                 <ul>
                     <% recipe.ingredients.split(',').forEach(function(ingredient) { %>
@@ -51,6 +65,7 @@
                         <li><%= instruction.trim() %></li>
                     <% }) %>
                 </ol>
+            </fieldset>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
                     <div class="link-container">
                     <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/recipes/<%=recipe._id%>/edit">EDIT</a>
@@ -62,6 +77,7 @@
                 </nav>
             </article>
         </div>
+    </div>
     </main>
 </body>
 </html>

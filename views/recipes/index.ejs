@@ -5,22 +5,14 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <div class="index">
-            <p>Welcome, <%= user %>!</p>
-           
+        <p>Welcome, <%= user %>!</p>       
             <a href="/recipes/new">Add a New Recipe</a>
            <div class="recipe-container">
                 <% for(let i = 0; i < recipes.length; i++){ %>
                     <div class="recipe">
                         <div class="img-container">
                             <a href="/recipes/<%= recipes[i]._id %>">
-                            <img src="<%= recipes[i].image %>" name="image" alt="Recipe Image"></a>
-                           <script>
-                                const img = document.getElementById("image") 
-                                img.addEventListener('error', (event) => { 
-                                event.target.src = "/images/defaultImage.png" 
-                                event.onerror = null 
-                                });
-                           </script>
+                            <img src="<%= recipes[i].image || '/images/defaultImage.png' %>" name="image" alt="Recipe Image"></a>
                         </div class="title">
                         <a href="/recipes/<%= recipes[i]._id %>"><%= recipes[i].title %></a>    
                     </div>                            
