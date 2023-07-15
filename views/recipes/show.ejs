@@ -49,13 +49,13 @@
                <legend>Recipe Type: <h5><%= recipe.type %></h5></legend>
                 <legend>Ingredients:</legend>
                 <ul>
-                    <% recipe.ingredients.split(',').forEach(function(ingredient) { %>
+                    <% recipe.ingredients.split(';').forEach(function(ingredient) { %>
                         <li><%= ingredient.trim() %></li>
                     <% }) %>
                 </ul>
                 <legend>Instruction:</legend>
                 <ol>
-                    <% recipe.instruction.split(',').forEach(function(instruction) { %>
+                    <% recipe.instruction.split(';').forEach(function(instruction) { %>
                         <li><%= instruction.trim() %></li>
                     <% }) %>
                 </ol>
