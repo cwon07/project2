@@ -3,6 +3,17 @@
 <%- include('../partials/head.ejs') %>
 <body>
     <%- include('../partials/header.ejs') %>
+    <style>
+        legend {
+    font-family: 'Solway', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px;
+        }
+        fieldset {
+            margin: 80px;
+        }
+    </style>
     <main>
         <div>
             <form action="/user/login" method="POST">
@@ -10,7 +21,7 @@
                     <legend>User Information</legend>
                     <label>USERNAME: <input type="text" name="username" required/></label>
                     <label>PASSWORD: <input type="password" name="password" required/></label>
-                    <input class="button button-outline" type="submit" value="Login"/>
+                    <input type="submit" style="background-color: transparent; color: darkslategray; border-color: darkslategray; font-size: 1.4rem" value="Login"/>
                 </fieldset>
             </form>        
         </div>

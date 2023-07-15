@@ -11,11 +11,14 @@
             display: flex;
         }
         .sidebar {
-            background: url('<%=recipe.image || '/images/defaultImage.png' %>');
             background-size: 40rem 80rem;
-            width: 80rem;
-            max-height: 80rem;
-            background-repeat: no-repeat;   
+            width: 60rem;
+            background-repeat: no-repeat;           
+        }
+        .sidebar img {
+            width: 80%;
+            height: auto;
+            object-fit: fill;
         }
         legend h2 {
             font-family: 'Solway', serif;
@@ -35,12 +38,13 @@
         .nav-link {
             margin-right: 10px;
         }
-     
     </style>
     <main>
        
         <div class="container">  
-               <div class="sidebar"></div>
+               <div class="sidebar">
+                <img src="<%= recipe.image || '/images/defaultImage.png' %>" alt="Recipe Image">
+               </div>
                <div class="recipe-info">
                 <fieldset class="recipeinfo">
                     <legend><h2><%= recipe.title %></h2></legend>

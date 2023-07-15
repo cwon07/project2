@@ -23,13 +23,13 @@
                 <fieldset>
                     <legend>Edit <%= recipe.title %></legend>
                
-                <label>Title: <input type="text" name="title" value="<%= recipe.title%>"/></label>
+                <label>Title: <input type="text" name="title" value="<%=recipe.title%>"/></label>
                 <label>Type: <input type="text" name="type" value="<%= recipe.type%>"/></label>
                 <label>Image: <input type="text" name="image" value="<%= recipe.image%>"/></label>
                 <label> Ingredients: 
-                    <textarea id="textarea" name="ingredients" value="<%= recipe.ingredients%>"></textarea></label>
+                    <textarea id="textarea" input type="text" name="ingredients" value="<%= recipe.ingredients%>"></textarea></label>
                 <label> Instruction: 
-                    <textarea id="textarea" name="instruction" value="<%= recipe.instruction%>"></textarea></label>
+                    <textarea id="textarea" input type="text" name="instruction" value="<%= recipe.instruction%>"></textarea></label>
                 </label>
                 <div class="bottom-links">
                 <button style="background-color: transparent; color: darkslategray; border-color: transparent; font-size: 1.4rem">EDIT RECIPE</button>

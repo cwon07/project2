@@ -3,15 +3,26 @@
 <%- include('../partials/head.ejs') %>
 <body>
     <%- include('../partials/header.ejs') %>
+    <style>
+        legend {
+    font-family: 'Solway', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px;
+        }
+        fieldset {
+            margin: 80px;
+        }
+    </style>
     <main>
         <div>
             <form action="/user/signup" method="POST">
                 <fieldset>
-                    <legend>New User Information</legend>
+                    <legend>Account Sign Up</legend>
                     <label>USERNAME: <input type="text" name="username" required/></label>
                     <label>PASSWORD: <input type="text" name="password" required/></label>
                     <label>EMAIL: <input type="text" name="email" required/></label>
-                    <input class="button button-outline" type="submit" value="Create Account"/>
+                    <input type="submit" style="background-color: transparent; color: darkslategray; border-color: darkslategray; font-size: 1.4rem" value="Create Account"/>
                 </fieldset>
             </form>
         </div>
