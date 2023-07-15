@@ -17,6 +17,10 @@ p,a {
     max-height: 80%;
 }
 
+.button {
+    background-color: transparent;
+    font-family: 'Nunito', sans-serif;
+}
 .mb-auto {
     text-align: right;
     font-family:'Hammersmith One', sans-serif;

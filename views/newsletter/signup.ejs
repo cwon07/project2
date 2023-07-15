@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crème de la Crème</title>
+        <%- include('../partials/head.ejs') %>
+    </head>
 <body>
-    
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <div style="margin:20px">
+            <form action="/user/newsletter" method="POST">
+                <fieldset>
+                    <legend style="margin: 20px 0px; font-size: 2rem; font-family: Hammersmith One, sans-serif">Sign up for updates on our site!</legend>
+                    <label>First Name: <input type="text" name="fName" required/></label>
+                    <label>Email: <input type="text" name="email" required/></label>
+                    <input type="submit" value="Sign Me Up!" style="background-color: transparent; color: darkslategray; border-color: darkslategray; font-size: 1.4rem"/>
+                </fieldset>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

@@ -12,8 +12,9 @@
         }
         .sidebar {
             background: url('<%=recipe.image || '/images/defaultImage.png' %>');
-            background-size: 30vw 70vh;
+            background-size: 40rem 80rem;
             width: 80rem;
+            max-height: 80rem;
             background-repeat: no-repeat;   
         }
         legend h2 {
@@ -34,16 +35,7 @@
         .nav-link {
             margin-right: 10px;
         }
-        .link-button {
-            background: none;
-            border: none;
-            font-weight: bold;
-            text-decoration: underline;
-            cursor: pointer;
-            padding: 0;
-            font-size: 18px;
-            margin-right: 10px;
-        }
+     
     </style>
     <main>
        
@@ -68,11 +60,11 @@
             </fieldset>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
                     <div class="link-container">
-                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/recipes/<%=recipe._id%>/edit">EDIT</a>
+                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/recipes/<%=recipe._id%>/edit"><button style="background-color: transparent; border-color: transparent; font-size: 1.4rem">EDIT</a></button>
                     <form action="/recipes/<%=recipe._id %>?_method=DELETE" method="POST">
-                        <button class="link-button" type="submit">DELETE</button> 
+                        <button style="background-color: transparent; color: darkslategray; border-color: transparent; font-size: 1.4rem" type="submit">DELETE</button>                         
                     </form>
-                    <a class="nav-link fw-bold py-1 px-0" href="/recipes">BACK TO LIST</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="/recipes"><button style="background-color: transparent; border-color: transparent; font-size: 1.4rem">BACK TO LIST</a></button>
                     </div>
                 </nav>
             </article>

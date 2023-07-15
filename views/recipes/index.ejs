@@ -5,8 +5,8 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <div class="index">
-        <p>Welcome, <%= user %>!</p>       
-            <a href="/recipes/new">Add a New Recipe</a>
+        <p>Welcome, <%= user %>!</p>    
+           <a href="/recipes/new"><button style="background-color: transparent; border-color: darkslategray; font-size: 1.4rem">Click Here to Add New Recipe</a></button>
            <div class="recipe-container">
                 <% for(let i = 0; i < recipes.length; i++){ %>
                     <div class="recipe">
