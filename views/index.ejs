@@ -4,7 +4,7 @@
         <%- include('./partials/head.ejs') %>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title style>Crème de la Crème</title>
+        <title>Crème de la Crème</title>
    
 </head>
 <body> 
@@ -24,12 +24,10 @@
     
     #showcase{
     background-image: url(./images/piebackground.jpeg);
-    background-repeat: repeat;
+    background-repeat: repeat-y;
     background-size: cover;
     background-position: center;
-   
-
-    height:100vh;
+    min-height: 100vh;
     }
 
     #showcase .header {
@@ -71,11 +69,11 @@
               </nav>
         </div>
         <div class="header">
-            <h1 style>CRÈME DE LA CRÈME</h1>  
+            <h1>CRÈME DE LA CRÈME</h1>  
         </div>
         <div class="content">
             <h3>A digital recipe box <br> for your favorite recipes.</h3>
-            <a class="newsletter-link" href="/user/newsletter"><button style="background-color: transparent; color: white; border-color: white; font-size: 2rem">Sign Up for Updates</button></a>
+            <a class="newsletter-link" href="/newsletter"><button style="background-color: transparent; color: white; border-color: white; font-size: 2rem">Sign Up for Updates</button></a>
         </div>
     </header>
 </body>

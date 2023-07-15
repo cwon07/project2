@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const RecipeRouter = require('./controllers/recipe');
 const UserRouter = require('./controllers/user');
+const NewsRouter = require('./controllers/newsletter')
 const app = express();
 const morgan = require('morgan');
 const methodOverride = require('method-override');
@@ -23,6 +24,7 @@ app.use(session({
 }));
 app.use("/recipes", RecipeRouter);
 app.use("/user", UserRouter);
+app.use("/newsletter", NewsRouter)
 
 
 app.get('/', (req, res) => {
